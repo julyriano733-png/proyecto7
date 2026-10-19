@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario accesible</title>
+    <link rel="stylesheet" href="assets/pagina.css">
+</head>
+
+<body>
+
+    <main class="tarjeta">
+
+        <form class="formulario" action="#" method="post" novalidate>
+            <h1 class="visually-hidden">Actualizar perfil</h1>
+
+            <!-- ................................nombre................................ -->
+            <div>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            </div>
+
+            <!-- ................................correo................................ -->
+            <div>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" value="email@gmail.com"  required>
+                
+            </div>
+
+            <!-- ................................contraseña................................ -->
+            <div>
+                <label for="clave">Contraseña</label>
+                <div class="caja-clave">
+                    <input type="password" id="clave" name="clave" placeholder="xxxxxxxx" required
+                        aria-describedby="estado-clave">
+                    <!-- .........................ojito......................... -->
+                    <button type="button" class="boton-ojo" aria-label="Mostrar contraseña"
+                        aria-pressed="false">👁</button>
+                </div>
+                <!-- ................................texto de estado................................ -->
+                <p id="estado-clave" class="visually-hidden">La contraseña está oculta</p>
+            </div>
+
+            <!-- ................................confirmar contraseña................................ -->
+            <div>
+                <label for="confirmar">Confirmar contraseña</label>
+                <div class="caja-clave">
+                    <input type="password" id="confirmar" name="confirmar" placeholder="xxxxxxxx" required
+                        aria-describedby="estado-confirmar">
+                    <!-- .........................ojito......................... -->
+                    <button type="button" class="boton-ojo" aria-label="Mostrar confirmación de contraseña"
+                        aria-pressed="false">👁</button>
+                </div>
+                <p id="estado-confirmar" class="visually-hidden">La contraseña está oculta</p>
+            </div>
+
+            <!-- ................................botón enviar................................ -->
+            <button type="submit" class="boton-enviar">Actualizar perfil</button>
+
+        </form>
+
+        <!-- ................................parte derecha................................ -->
+        <aside class="progreso">
+            <div class="circulo" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                <span class="porcentaje">70%</span>
+            </div>
+
+            <!-- ................................título................................ -->
+            <h2>actividades completadas</h2>
+
+            <!-- ................................lista de requisitos................................ -->
+            <ul class="requisitos">
+                <li class="hecho">analizar la actividad <span class="visually-hidden">(completado)</span></li>
+                <li class="hecho">Buscar en internet del tema  <span class="visually-hidden">(completado)</span></li>
+                <li class="hecho"> adquirir informacion del tema <span class="visually-hidden">(completado)</span></li>
+                <li>hacer la actividad <span class="visually-hidden">(pendiente)</span></li>
+                <li>presentar la actividad <span class="visually-hidden">(pendiente)</span></li>
+            </ul>
+        </aside>
+
+    </main>
+
+</body>
+
+</html>
